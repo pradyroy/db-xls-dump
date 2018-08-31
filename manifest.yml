@@ -1,0 +1,8 @@
+---
+applications:
+- name: db-xls-dump
+  memory: 256M
+  instances: 1
+  host: samples-pradyroy
+  domain: in.pune.pradyroy
+  path: build/libs/db-xls-dump-0.1.0.jar

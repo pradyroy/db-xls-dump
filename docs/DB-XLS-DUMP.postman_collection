@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DB-XLS-DUMP",
+		"_postman_id": "b7b718a0-f40d-c2c4-9873-dec64ebca27c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "db-dump-heartbeat",
+			"request": {
+				"url": "http://localhost:8080/dbdump/heartbeat",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"servername\" : \"127.0.0.1\",\n\t\"portnumber\" : \"3306\",\n\t\"dbname\" : \"sample-db\",\n\t\"username\" : \"root\",\n\t\"password\" : \"su3spense\",\n\t\"querystring\" : \"select * from usernames\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "db-dump-sample-request-data",
+			"request": {
+				"url": "http://localhost:8080/dbdump",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"servername\" : \"127.0.0.1\",\n\t\"portnumber\" : \"3306\",\n\t\"dbname\" : \"sample-db\",\n\t\"username\" : \"root\",\n\t\"password\" : \"su3spense\",\n\t\"querystring\" : \"select * from usernames\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "db-dump",
+			"request": {
+				"url": "http://localhost:8080/dbdump",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"connectionurl\": null,\n    \"servername\": \"127.0.0.1\",\n    \"portnumber\": \"3306\",\n    \"dbname\": \"sample-db\",\n    \"username\": \"root\",\n    \"password\": \"su3spense\",\n    \"querystring\": \"select * from usernames\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
